@@ -1,6 +1,8 @@
 //index.js
-//获取应用实例
+//获取应用实例，全局变量
 const app = getApp()
+console.log(app.globalData.name)
+console.log(app.globalData.age)
 
 Page({
   data: {
@@ -91,6 +93,14 @@ Page({
     this.setData({
       counter: this.data.counter -= 1
     })
+  },
+  handleGetUserInfo(event) {
+    console.log(event)
   }
   // 结束点击示例
 })
+
+
+//编程范式：
+//1.命令式编程：原生操作DOM
+//2.声明式编程：Vue/React/Angular
