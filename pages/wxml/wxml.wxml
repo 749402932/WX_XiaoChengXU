@@ -1,0 +1,75 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- 1.wxml的格式 -->
+<!-- <view></view>
+<image />
+<input />
+<view Class="" class=""></view> -->
+
+<!-- 2.Mustache -->
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname +' '+ lastname}}</view>
+<view>{{age >=18 ? '成年人' : '未成年人'}}</view>
+
+<view>{{nowTime}}</view>
+
+<button size="mini" bindtap="handleSwitchColor">切换颜色</button>
+<view class="box {{isActive ? 'active' : ''}}">哈哈哈</view>
+
+<!-- <map class="map" longitude="116.11" latitude="39.6"></map> -->
+
+<view>------------- 条件判断 ---------------</view>
+<!-- wx:if使用 -->
+<button size="mini" bindtap="handleSwitchShow">切换显示</button>
+<view wx:if="{{isShow}}">哈哈哈</view>
+
+<!-- wx:elif/wx:else -->
+<button size="mini" bindtap="handleIncrement">分数递增6</button>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >=60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- hidden属性 -->
+<view hidden="{{false}}">我是hidden属性控制的内容</view>
+
+<!-- wx:if和hidden在隐藏组件时有什么区别 -->
+<!-- 
+区别：
+  hidden: 将一个组件隐藏起来时，该组件依然是存在(display: none)
+  wx:if: 将一个组件隐藏起来时，该组件根本不存在(压根没有创建)
+选择：
+  如果显示和隐藏切换的频率非常高，选择使用hidden
+  如果显示和隐藏切换的频繁非常低，那么选择wx:if
+ -->
+<view>----------------------</view>
+<view hidden="{{true}}">我是通过hidden控制的内容</view>
+<view wx:if="{{false}}">我是通过wx:if控制的内容</view>
+
+<view>-------- 列表渲染 ---------</view>
+<!-- 1.wx:for的回顾 -->
+<!-- 1.1.遍历数组/字符串/数字 -->
+<!-- <view wx:for="{{['abc','cba','nba']}}">{{item}} {{index}}</view>
+<view wx:for="coderwhy">{{item}} {{index}}</view>
+<view wx:for="{{9}}">{{item}}</view> -->
+
+<!-- 2.block标签 -->
+<!-- <block wx:for="{{3}}">
+  <button>按钮</button>
+  <view>呵呵呵</view>
+  <text>哈哈哈</text>
+</block> -->
+
+<!-- 3.item、index起名字 -->
+<!-- <view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="i">{{movie}} {{i}}</view>
+
+<block wx:for="{{nums}}" wx:for-item="inner_nums">
+  <block wx:for="{{inner_nums}}">
+    <view>{{item}}</view>
+  </block>
+</block> -->
+
+<!-- 4.key的作用 -->
+<view class="container">
+  <view wx:for="{{letters}}">{{item}}</view>
+</view>
