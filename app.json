@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/wxs/wxs",
+    "pages/muban/muban",
     "pages/index/index",
     "pages/logs/logs"
   ],

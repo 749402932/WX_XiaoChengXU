@@ -1,0 +1,28 @@
+<!--pages/muban/muban.wxml-->
+<!-- template -->
+<!-- 之前的时候小程序不支持自定义组件，为了进行代码的附庸：template -->
+<!-- 模板中包裹的内容，在没有被使用前，是不会进行任何的渲染的 -->
+<!-- <template name="contentItem">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template> -->
+<!-- 结论： include是不能导入模板 -->
+<!-- 
+  关于wxml的导入有两种方式：
+    import导入：
+      1.主要是导入template
+      2.特点：不能进行递归导入
+    include引入：
+      1.将公共的wxml中的组件抽取到一个文件中
+      2.特点：不能导入template/wxs，可以进行递归导入
+ -->
+<import src="/wxml/template.wxml" />
+
+<template is="contentItem" data="{{btnText:'按钮',content:'哈哈哈'}}" />
+<template is="contentItem" data="{{btnText:'警告',content:'呵呵呵'}}" />
+<template is="contentItem" data="{{btnText:'点击',content:'嘿嘿嘿'}}" />
+<template is="contentItem" data="{{btnText:'登录',content:'嘻嘻嘻'}}" />
+
+<!-- 错误的写法 -->
+<!-- <view>{{25.6666666.toFixed(2)}}</view> -->
+<!-- <view>{{numberToFixed(25.6666666)}}</view> -->
