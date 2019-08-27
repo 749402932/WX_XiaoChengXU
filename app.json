@@ -3,6 +3,9 @@
     "pages/index/index",
     "pages/logs/logs"
   ],
+  "usingComponents": {
+    "my-cpn": "/components/my-cpn/my-cpn"
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
