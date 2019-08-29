@@ -1,0 +1,6 @@
+/* pages/dialog/dialog.wxss */
+
+.title {
+  color: red;
+  font-size: 72rpx;
+}
