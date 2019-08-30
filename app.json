@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/navigator/navigator",
+    "pages/detail/detail",
+    "pages/comment/comment",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -9,5 +12,17 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/navigator/navigator",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "个人中心"
+      }
+    ]
+  }
 }
